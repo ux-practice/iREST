@@ -1,6 +1,6 @@
 {
   "name": "irest-app",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "iRest is a zero-configuration application that allows you to easily create/manage APIs, generate random data on demand and perform operations on that data using REST interface.",
   "main": "lib/server/server.js",
   "scripts": {
