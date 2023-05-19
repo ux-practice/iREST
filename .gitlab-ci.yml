@@ -39,7 +39,7 @@ lint:
     - npm run lint
   # Defines the names of branches and tags the job runs for
   only:
-    - iREST_2.0_RELEASE1
+    - iREST_2.0_RELEASE_PUBLISH1
 
 # Test job
 test:
@@ -64,7 +64,7 @@ test:
         - junit.xml  
   # Defines the names of branches and tags the job runs for
   only:
-    - iREST_2.0_RELEASE1
+    - iREST_2.0_RELEASE_PUBLISH1
 
 # Build job
 build:
@@ -77,7 +77,7 @@ build:
   script:
     - echo "Installing Dependency. Please wait.."
     - npm install
-    - npm run build:remote
+    - npm run build
     - echo "Cleaning build directory..."
     - rm -rf build
     #create build if not exists
@@ -92,7 +92,7 @@ build:
     expire_in: 2 hours  
   # Defines the names of branches and tags the job runs for
   only:
-    - iREST_2.0_RELEASE1
+    - iREST_2.0_RELEASE_PUBLISH
 
 # Deploy JJob
 deploy:
@@ -104,7 +104,7 @@ deploy:
   script:
     - sh local-server-deployment.sh
   only:
-    - iREST_2.0_RELEASE1
+    - iREST_2.0_RELEASE_PUBLISH1
 
 git-sync:
   stage: git-sync
