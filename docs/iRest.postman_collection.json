@@ -1,0 +1,632 @@
+{
+	"variables": [],
+	"info": {
+		"name": "iRest",
+		"_postman_id": "50578d9a-80f4-964c-b3f8-dd09c392bead",
+		"description": "iRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Simulator",
+			"description": "",
+			"item": [
+				{
+					"name": "Default Service Response",
+					"description": "",
+					"item": [
+						{
+							"name": "GET",
+							"description": "",
+							"item": [
+								{
+									"name": "Normal Response",
+									"request": {
+										"url": "http://localhost:9000/api/rest/irest-project/irest-get-default-responsed",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Delayed Response",
+									"request": {
+										"url": "http://localhost:9000/api/rest/irest-project/irest-get-default-responsed-delay",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Response Custom headers",
+									"request": {
+										"url": "http://localhost:9000/api/rest/Dynamic-Response/endpoint22211",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Disabled Mock Response",
+									"request": {
+										"url": "http://localhost:9000/api/rest/Dynamic-Response/eps",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Random value for dynamic key & with count value)",
+									"request": {
+										"url": "http://localhost:9000/api/rest/Dynamic-Response/Endpoint-random-2",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Specific value for dynamic key & with count value)",
+									"request": {
+										"url": "http://localhost:9000/api/rest/Dynamic-Response/endpoint-specific-3",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Random Value for dynamic key and with Dynamic count)",
+									"request": {
+										"url": "http://localhost:9000/api/rest/test-project-22334/endpoint-random-count-1",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Specific Value for dynamic key and with Dynamic count)",
+									"request": {
+										"url": "http://localhost:9000/api/rest/test-project-22334/endpoint-specific-count-1",
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "POST",
+							"description": "",
+							"item": [
+								{
+									"name": "Dynamic data",
+									"request": {
+										"url": "http://localhost:9000/api/rest/test-project-22334/endpoint-test",
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Save Service Response",
+					"description": "",
+					"item": [
+						{
+							"name": "POST Save Request",
+							"request": {
+								"url": "http://localhost:9000/api/rest/irest-project/save-demo",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"question\": \"What is Javascript ?\",\r\n    \"answer\": \"Javascript is a HLL that works on chrome V8. It has certain external API such as timers, network request, etc.\",\r\n    \"vote\": 8,\r\n    \"author\": \"Anurag j\"\r\n}\r\n"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Save Response",
+							"request": {
+								"url": {
+									"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-save-post?IREST_RECORD_ID=600ad00223752652241c27f2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"rest",
+										"test-project-22334",
+										"endpoint-save-post"
+									],
+									"query": [
+										{
+											"key": "IREST_RECORD_ID",
+											"value": "600ad00223752652241c27f2"
+										}
+									],
+									"variable": []
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"a\": 1\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "PATCH Save Response",
+							"request": {
+								"url": {
+									"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-save-post?IREST_RECORD_ID=600ad00223752652241c27f2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"rest",
+										"test-project-22334",
+										"endpoint-save-post"
+									],
+									"query": [
+										{
+											"key": "IREST_RECORD_ID",
+											"value": "600ad00223752652241c27f2"
+										}
+									],
+									"variable": []
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vote\": 11\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Save Response",
+							"request": {
+								"url": "http://localhost:9000/api/rest/test-project-22334/endpoint-save-post",
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"IREST_RECORD_ID\": \"60054da5d0a5992d04b9279b\"\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Existing Service Response",
+					"description": "",
+					"item": [
+						{
+							"name": "Existing List",
+							"request": {
+								"url": "http://localhost:9000/api/rest/irest-project/save-demo",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"url": "http://192.168.194.28:9000/api/register",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testId@impetus.com\",\r\n    \"password\": \"password\",\r\n    \"name\": \"test user\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "localhost:9000/api/login",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"anurag.jain@gmail.com\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mock",
+			"description": "",
+			"item": [
+				{
+					"name": "Create (Default)",
+					"request": {
+						"url": "http://localhost:9000/api/mock/create",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5ee9bb30ae65d45d0831011f\",\r\n    \"projectId\": \"600ac977fd0c1f5960523c93\",\r\n    \"serviceResponseType\": \"default\",\r\n    \"serviceResponseBody\": {\"y\":120,\"z\":{},\"qa\":{\"as\":1,\"bf\":2},\"abc\":[],\"kbc\":[9,8,7,6,5],\"w\":[{\"k\":[],\"q\":123,\"p\":{},\"r\":[1,2,4]},{\"s\":1},1],\"x\":{\"a\": {},\"b\":1,\"c\":3}},\r\n    \"projectName\": \"irest-trial2\",\r\n    \"method\": \"GET\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"default-trial\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 5,\r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"default-trial\",\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [],\r\n    \"params\": [],\r\n    \"isDynamicResponse\": true,\r\n    \"dynamicResponseKey\": \"a\",\r\n    \"dynamicResponseRandom\": false,\r\n    \"dynamicResponseSpecific\": true,\r\n    \"dynamicResponseSpecificKeyValue\": [{\"answer\": \"answer\"}],\r\n    \"isDynamicImportCount\": true,\r\n    \"isDynamicImportSize\": false,\r\n    \"dynamicImportCount\": 1000\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Existing)",
+					"request": {
+						"url": "http://localhost:9000/api/mock/create",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5ee9bb30ae65d45d0831011f\",\r\n    \"projectId\": \"5f02b4902d9e94232c4bc61f\",\r\n    \"serviceResponseType\": \"existing\",\r\n    \"referenceId\": \"5ff71980af213608284dee28\",\r\n    \"projectName\": \"test-project-22334\",\r\n    \"method\": \"GET\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"endpoint-save-post\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 5,\r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"save-demo\",\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [],\r\n    \"params\": [],\r\n    \"isDynamicResponse\": false,\r\n    \"dynamicResponseKey\": \"a\",\r\n    \"dynamicResponseRandom\": false,\r\n    \"dynamicResponseSpecific\": true,\r\n    \"dynamicResponseSpecificKeyValue\": [{\"answer\": \"answer\"}],\r\n    \"isDynamicImportCount\": true,\r\n    \"isDynamicImportSize\": false,\r\n    \"dynamicImportCount\": 1000\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Save)",
+					"request": {
+						"url": "http://localhost:9000/api/mock/create",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5f9c18dd053cb11a5770c76e\",\r\n    \"projectId\": \"6005909e0e64366fd873d00d\",\r\n    \"serviceResponseType\": \"save\",\r\n    \"projectName\": \"irest-project\",\r\n    \"method\": \"GET\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"default-demo\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 5,\r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"save-demo\",\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [],\r\n    \"params\": [],\r\n    \"isDynamicResponse\": false\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"url": {
+							"raw": "http://localhost:9000/api/mock/list?limit=10&offset=0&sortBy=undefined&order=undefined&search=undefined&projectId=6005909e0e64366fd873d00d&existing=true&userId=5f9c18dd053cb11a5770c76e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"list"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "undefined",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "order",
+									"value": "undefined",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "search",
+									"value": "undefined",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "projectId",
+									"value": "6005909e0e64366fd873d00d",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "existing",
+									"value": "true",
+									"equals": true,
+									"description": "Existing will check the type service response type === 'save'"
+								},
+								{
+									"key": "userId",
+									"value": "5f9c18dd053cb11a5770c76e",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"url": "http://localhost:9000/api/mock/item/5f2b835b7907d527f015b4f1",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Status Enabled/Disbaled",
+					"request": {
+						"url": "http://localhost:9000/api/mock/item/5fb796247e0b704cb0a9976b",
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mockStatus\": \"enabled\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"url": "http://localhost:9000/api/mock/item/5fc9f51a3ab22a2d8c569e7e",
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5f9c18dd053cb11a5770c76e\",\r\n    \"projectId\": \"5f02b4902d9e94232c4bc61f\",\r\n    \"serviceResponseType\": \"default\",\r\n    \"serviceResponseBody\": {\"y\":120,\"z\":{},\"qa\":{\"as\":1,\"bf\":2},\"abc\":[],\"kbc\":[9,8,7,6,5],\"w\":[{\"k\":[],\"q\":123,\"p\":{},\"r\":[1,2,4]},{\"s\":1},1],\"x\":{\"a\": {},\"b\":1}},\r\n    \"projectName\": \"Dynamic-Response\",\r\n    \"method\": \"POST\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"endpoint-test-strr\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 2, \r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"test-mock\",\r\n    \"isDynamicResponse\": true,\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [{\"Custom-Header\": \"Custom-Value\"}],\r\n    \"params\": [],\r\n    \"dynamicResponseKey\": \"a\",\r\n    \"dynamicResponseRandom\": false,\r\n    \"dynamicResponseSpecific\": true,\r\n    \"dynamicResponseSpecificKeyValue\": [{\"answer\": \"answer\"}],\r\n    \"isDynamicImportCount\": true,\r\n    \"isDynamicImportSize\": false,\r\n    \"dynamicImportCount\": 1000\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"url": "http://localhost:9000/api/mock/item/5fc9f51a3ab22a2d8c569e7e",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"message\": \"Mock Deleted Successfully.\",\r\n  \"status\": 202\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jwt",
+			"description": "",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"url": "localhost:9000/api/login",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"anurag.jain@gmail.com\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Verify",
+					"request": {
+						"url": "http://localhost:9000/api/large-response",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudXJhZy5qYWluQGdtYWlsLmNvbSIsImlhdCI6MTYwNzA2NzI0MSwiZXhwIjoxNjA3MDk2MDQxfQ.dPdQ7sLF1FevamkjV2JbXYBxIc2uVBvX9gQ-Jx0dNl8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"description": "",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"url": {
+							"raw": "http://localhost:9000/api/project/list?searchQuery=test&pageNo=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"project",
+								"list"
+							],
+							"query": [
+								{
+									"key": "searchQuery",
+									"value": "test"
+								},
+								{
+									"key": "userId",
+									"value": "5f9c18dd053cb11a5770c76e",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"url": "http://localhost:9000/api/project/create",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5ee9bb30ae65d45d0831011f\",\r\n    \"projectName\": \"irest-trial2\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "file",
+			"description": "",
+			"item": [
+				{
+					"name": "JSON Upload",
+					"request": {
+						"url": "http://localhost:9000/api//file/json-upload",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/anurag.jain/Documents/incubator/iRest/docs/iRest.postman_collection.json",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

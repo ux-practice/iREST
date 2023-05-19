@@ -1,0 +1,47 @@
+{
+    "presets": ["@babel/preset-env", "@babel/react"],
+    "plugins": ["@babel/plugin-transform-runtime"],
+    "env": {
+      "production": {
+        "presets": ["minify"],
+        "plugins": [
+          "transform-node-env-inline",
+          "transform-remove-debugger",
+          [
+            "transform-remove-console", {
+              "exclude": [ "error", "warn", "info"]
+            }
+          ],
+          [
+            "transform-inline-environment-variables", {
+              "include": [
+                "NODE_ENV"
+              ]
+            }
+          ]
+        ],
+        
+      },
+      "remote": {
+        "presets": ["minify"],
+        "plugins": [
+          "transform-node-env-inline",
+          "transform-remove-debugger",
+          [
+            "transform-remove-console", {
+              "exclude": [ "error", "warn", "info"]
+            }
+          ],
+          [
+            "transform-inline-environment-variables", {
+              "include": [
+                "NODE_ENV"
+              ]
+            }
+          ]
+        ],
+        
+      }
+    }
+}
+

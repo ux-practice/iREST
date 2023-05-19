@@ -1,0 +1,302 @@
+label {
+  font-size: 0.9em;
+}
+.mock-card {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: 24px;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  margin-top: 3% !important;
+  margin-bottom: 3% !important;
+}
+.form-control {
+  padding: 0.6rem 0.35rem 0.6rem 0.35rem;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.rbt-input-hint input {
+  padding: 0.6rem 0.35rem 0.6rem 0.35rem;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+select.form-control:not([size]):not([multiple]),
+input.form-control {
+  height: inherit;
+}
+.create-project-typeahead {
+  position: relative;
+}
+.create-project {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+}
+.uploader {
+  color: blue;
+  border: 1px solid blue;
+}
+.radioButtonSetter {
+  display: inline-block;
+  padding-right: 10px;
+}
+.radioButtonSetter label {
+  padding-left: 5px;
+}
+
+.jsoneditor-repair {
+  display: none;
+}
+.jsoneditor-transform {
+  display: none;
+}
+#bulkDataSizeToggle {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+#card-body-bulk {
+  margin-top: -25px;
+}
+
+.card-table-layout {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.card-margin {
+  margin-bottom: 10px;
+}
+
+.card-layout {
+  height: 500px;
+  overflow: scroll;
+}
+
+.helperTextSize {
+  font-size: 12px;
+}
+.helpetTextLabel {
+  font-size: 14px;
+}
+.widthchange {
+  width: 100%;
+}
+.dashboard {
+  background-color: white;
+}
+.saveBtn {
+  width: 100px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.previewBtn {
+  width: 100px;
+  font-weight: bold;
+}
+.previewBtn:disabled {
+  opacity: 0.3;
+}
+.heading-text {
+  color: #8a8898;
+}
+.response-body-text {
+  font-weight: bold;
+}
+.options-bold-text {
+  font-weight: bold;
+}
+.advance-response-text {
+  color: black;
+  font-size: 16px;
+}
+.delete-btn {
+  color: #d03b3b;
+  background-color: white;
+}
+.trash-img {
+  padding-right: 7px;
+  width: 33%;
+  height: 33%;
+}
+.circle-img {
+  padding-right: 5px;
+}
+.rapidoc-close-preview {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.rapidoc-btn-preview {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bold-cross-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  top: -8px;
+  margin-top: -8px;
+}
+
+.form-width {
+  width: 100%;
+}
+
+.toggle-count-label {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.form-delay {
+  margin-top: 10px;
+  width: 26%;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-radio-toggle {
+  width: 26%;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.random-specific-padding {
+  padding-right: 15px;
+}
+
+.size-box {
+  width: 20%;
+}
+
+.count-box {
+  width: 35%;
+}
+
+.count-label {
+  width: 60%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.advance-text-label {
+  cursor: pointer;
+}
+rapi-doc::part(label-tag-title) {
+  display: none;
+}
+rapi-doc::part(operation-divider) {
+  display: none;
+}
+rapi-doc::part(section-operations-in-tag) {
+  margin-top: -40px;
+}
+
+.jsoneditor-poweredBy {
+  display: none;
+}
+
+.jsoneditor-curserinfo-label {
+  display: none;
+}
+.jsoneditor-curserinfo-val {
+  display: none;
+}
+.jsoneditor-statusbar {
+  display: none;
+}
+.container-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.accordion-spacing {
+  padding-bottom: 20px;
+}
+.accordion-top-spacing {
+  margin-top: 20px;
+}
+.accordion-top-spacing.fetch-schema-editor {
+  margin-top: 50px;
+}
+.upload-json-button {
+  color: #004f9f;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.sample-object {
+  position: relative;
+}
+
+.clipboard-faker {
+  position: absolute;
+  top: 0;
+  left: 350px;
+}
+.button-icon {
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid;
+  }
+textarea {
+  min-height: 310px;
+  display: block;
+  width: 100%;
+  resize: none;
+  padding: 15px;
+}
+.responsetype {
+  margin-left: 50px;
+  display: inline-block;
+}
+.responsetype label {
+  margin-right: 10px;
+}
+
+.responsetype label input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+#other-input-error-specific {
+  margin-top: 0px;
+}
+.save .jsoneditor-react-container,
+.default .jsoneditor-react-container {
+  min-height: 190px !important;
+  background-color: #ffffff;
+} 
+#dashboard .form-group.col-md-12 {
+  margin-bottom: 0px;
+}
+#dashboard .form-group.col-md-12.errorMode {
+  margin-bottom: 10px;
+}
+.response-editor-heading {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.response-editor-heading:first-child {
+  margin-top: 0;
+}
