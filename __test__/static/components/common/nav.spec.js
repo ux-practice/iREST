@@ -45,20 +45,20 @@ describe('Nav Component Test Cases', () => {
         const element = container.getElementsByClassName('fixed-top');  
         expect(element).toBeTruthy();
     })
-    test('Dashboard keyword should be present in Nav component', () => {
+    test('API Listing keyword should be present in Nav component', () => {
         render(
             <Router history={history}>
                 <Nav {...props} />
             </Router>);
-        const dashboard = screen.queryAllByText('Dashboard') 
+        const dashboard = screen.queryAllByText('API Listing') 
         expect(dashboard).toHaveLength(1);
     })
-    test('Dashboard keyword should be present in Nav component', () => {
+    test('Project Listing keyword should be present in Nav component', () => {
         render(
             <Router history={history}>
                 <Nav {...props} />
             </Router>);
-        const ProjectList = screen.queryAllByText('Project List') 
+        const ProjectList = screen.queryAllByText('Project Listing') 
         expect(ProjectList).toHaveLength(1);
     })
     test('logo icon should be present in Nav component', () => {

@@ -14,12 +14,12 @@ export const ProjectListPageUrl = '/projects'
 
 export const SidebarData = [
   {
-    title: 'Dashboard',
+    title: 'API Listing',
     path: '/dashboard',
     cName: 'nav-text',
   },
   {
-    title: 'Project List',
+    title: 'Project Listing',
     path: '/projects',
     cName: 'nav-text',
   },

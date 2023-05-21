@@ -92,7 +92,7 @@ build:
     expire_in: 2 hours  
   # Defines the names of branches and tags the job runs for
   only:
-    - iREST_2.0_RELEASE_PUBLISH
+    - iREST_2.0_RELEASE_PUBLISH1
 
 # Deploy JJob
 deploy:

@@ -1,3 +1,5 @@
+name: Build and Publish
+
 on:
   push:
     branches:
@@ -5,12 +7,26 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: "14.x"
-      - run: npm install
+      
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build
+        run: npm run build
+
+      - name: Create build folder
+        run: |
+          rm -rf build
+          mkdir build
+
+      - name: Copy dist to build
+        run: cp -R lib dist node_modules package.json .env.prod build/
      
       - name: Get latest release tag
         uses: rez0n/actions-github-release@main
@@ -45,7 +61,8 @@ jobs:
 
       - name: NPM Publish
         if: ${{ env.CURRENT_VERSION_APPENDED != env.RELEASE_VERSION }}
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.IREST_LIVE_NPM_TOKEN }}
+        run: |
+          cd build
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.IREST_TEST_NPM_TOKEN }}" > .npmrc
+          npm publish
 

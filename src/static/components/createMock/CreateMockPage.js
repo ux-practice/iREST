@@ -1148,7 +1148,7 @@ const CreateMock = props => {
             <div className="row" data-testid="row1">
               <div className="form-group col-xl-4" data-testid="form">
                 <label htmlFor="inputApi" data-testid="inputApi" className="heading-text">
-                  API
+                  API Base URL
                 </label>
                 <div className="input-group" data-testid="inputgroupapi">
                   <input
@@ -1334,7 +1334,7 @@ const CreateMock = props => {
                 </div>
                 <div className="form-group col-md-4">
                   <label htmlFor="inputStatusCode" className="heading-text">
-                    Status Code
+                    Response Status
                   </label>
                   <select
                     id="inputStatusCode"
@@ -1360,7 +1360,7 @@ const CreateMock = props => {
                   component={RadioButtonStatus}
                   name="isSchema"
                   id="isSchema"
-                  label="Show Schema Modal"
+                  label="Response body - Schema"
                 />
               </div>}
               {isSchema ? (
@@ -1384,7 +1384,7 @@ const CreateMock = props => {
                   }}
                 >
                 <Card>
-                  <CustomToggle eventKey="0">Response Schema</CustomToggle>
+                  <CustomToggle eventKey="0">Response Schema Template</CustomToggle>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
                       {allowedSaveMethodEditor.map((schemaType) => {
@@ -1463,7 +1463,7 @@ const CreateMock = props => {
                   }}
                 >
                 <Card>
-                  <CustomToggle eventKey="0">Response Schema</CustomToggle>
+                  <CustomToggle eventKey="0">Response Schema Template</CustomToggle>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
                           {allowedFetchMethodEditor.map((methd, ind) => {
@@ -1527,7 +1527,7 @@ const CreateMock = props => {
                               className="helpetTextLabel options-bold-text count-box"
                               htmlFor="randomCount"
                             >
-                              Count(Number)
+                              Data Output - In Count
                             </label>
                             <div className="custom-control custom-switch col-md-9 count-label">
                               <Tooltip content="Toggle Status" direction="extreme">
@@ -1572,7 +1572,7 @@ const CreateMock = props => {
                               className="helpetTextLabel options-bold-text size-box"
                               htmlFor="randomSize"
                             >
-                              Size
+                              Data Output - In Size
                             </label>
                             <div
                               className="custom-control custom-switch col-md-9"
@@ -1691,7 +1691,7 @@ const CreateMock = props => {
                           <div className="d-flex">
                             <div className="form-group col-md-5">
                               <label htmlFor="inputDynamicKeyLabel" className="options-bold-text">
-                                Key
+                                Select Key
                               </label>
                             </div>
                             <div className="form-group col-md-6">
@@ -1727,7 +1727,7 @@ const CreateMock = props => {
                           </div>
                           <div className="pl-3 mt-2">
                             <span className="options-bold-text random-specific-padding">
-                              Random/Specific Response
+                              Dynamic Response Type
                             </span>
                             <Field
                               component={RandomSpecificToggle}
@@ -1863,7 +1863,7 @@ const CreateMock = props => {
                                   className="helpetTextLabel options-bold-text count-box"
                                   htmlFor="randomCount"
                                 >
-                                  Count(Number)
+                                  Data Output - In Count
                                 </label>
                                 <div className="custom-control custom-switch col-md-9 count-label">
                                   <Tooltip content="Toggle Status" direction="extreme">
@@ -1905,7 +1905,7 @@ const CreateMock = props => {
                                   className="helpetTextLabel options-bold-text size-box"
                                   htmlFor="randomSize"
                                 >
-                                  Size
+                                  Data Output - In Size
                                 </label>
                                 <div className="custom-control custom-switch col-md-9 toggle-count-label">
                                   <Tooltip content="Toggle Status" direction="extreme">
@@ -1938,7 +1938,7 @@ const CreateMock = props => {
                                   disabled={!props.values.isDynamicImportSize}
                                 />
                                 <span className="helperTextSize heading-text">
-                                  Max: 20480KB (20MB)
+                                  Max: 20MB
                                 </span>
                                 {values.dynamicImportSize < 1 && (
                                   <div className="input-feedback text-danger">Value cannot be less than 1</div>
@@ -1965,7 +1965,7 @@ const CreateMock = props => {
                 }}
               >
                 <Card>
-                  <CustomToggle eventKey="0">Advanced Options</CustomToggle>
+                  <CustomToggle eventKey="0">Other Options</CustomToggle>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body>
                       <div className="card-body">
@@ -2098,7 +2098,7 @@ const CreateMock = props => {
                 </div>
                 <div className="form-group col-md-6">
                   <label htmlFor="inputMockName" className="heading-text">
-                    Mock Name
+                    Display Name
                   </label>
                   <input
                     type="text"

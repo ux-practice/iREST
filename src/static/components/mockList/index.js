@@ -454,7 +454,7 @@ class MockList extends React.Component {
                   <div className="d-flex justify-content-between">
                     <div className="form-group w-100">
                       <label htmlFor="filter" className="keyword-label">
-                        Dashboard
+                        API Listing
                       </label>
                       <br />
                       <br />
