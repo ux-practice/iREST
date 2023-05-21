@@ -118,7 +118,7 @@ const JsonView = props => {
             </span>
              : null} 
           {isResponseBodyEditor && <><label htmlFor="inputResBody" className="response-body-text">
-           Response Body </label>
+           Response Body - Object </label>
            <div className="radioButtonSetter">
             <label>
               <input

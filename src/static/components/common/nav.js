@@ -4,7 +4,6 @@ import history from '../../history/createBrowserHistory'
 import './style.css'
 import logo from '../../assets/images/iRest_files/irest_logo_icon.png'
 import hamburgerMenu from '../../assets/images/iRest_files/nav_bar_ham.svg'
-import closeButton from '../../assets/images/iRest_files/close_button.svg'
 import {FirstPageUrl, SidebarData} from '../../constants/url'
 
 class Nav extends React.Component {
@@ -97,12 +96,6 @@ class Nav extends React.Component {
         </nav>
         <nav className={this.state.sidebar ? 'nav-menu active' : 'nav-menu'} ref={this.box}>
           <ul className="nav-menu-items" onClick={this.showSidebar}>
-            <li className="navbar-toggle">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <Link to="#" className="menu-bars">
-                <img src={closeButton} alt="sample_logo_icon" />
-              </Link>
-            </li>
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>

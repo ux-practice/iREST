@@ -195,7 +195,7 @@ function ProjectListPage(props) {
                 <div className="d-flex justify-content-between">
                   <div className="form-group w-100">
                     <label htmlFor="filter" className="keyword-label">
-                      Project List
+                      Project Listing
                     </label>
                     <br />
                     <br />

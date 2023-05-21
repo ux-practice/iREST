@@ -1,6 +1,6 @@
 {
   "name": "irest-app",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "iRest is a zero-configuration application that allows you to easily create/manage APIs, generate random data on demand and perform operations on that data using REST interface.",
   "main": "lib/server/server.js",
   "scripts": {
@@ -21,8 +21,7 @@
     "start:p": "cross-env NODE_ENV=production node lib/server/server.js",
     "test": "npm run lint && cross-env NODE_ENV=test jest",
     "test:unit": "cross-env NODE_ENV=test jest",
-    "test:ci": "npm run test:unit -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage",
-    "prepare": "husky install"
+    "test:ci": "npm run test:unit -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage"
   },
   "repository": {
     "type": "git",
