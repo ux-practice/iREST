@@ -107,7 +107,7 @@ const CreateMock = props => {
   const [saveSchemaAccordion, setSaveSchemaAccordion] = useState('-1')
   const [fetchSchemaAccordion, setFetchSchemaAccordion] = useState('-1')
   const [defaultOptions, setDefaultOptions] = useState('-1')
- 
+  const [isUploadJsonEditMode, setUploadJsonEditMode] = useState(false)
   
   const history = useHistory()
   const dispatch = useDispatch()
@@ -121,9 +121,7 @@ const CreateMock = props => {
   const optionValues = [200, 404, 500, 401, 502]
 
   useEffect(() => {
-    if (dynamicKeys.length > 0) {
-      setFieldValue('dynamicResponseKey', JSON.stringify(dynamicKeys))
-    }
+    setFieldValue('dynamicResponseKey', JSON.stringify(dynamicKeys))
   }, [dynamicKeys])
 
   useEffect(() => {
@@ -572,7 +570,7 @@ const CreateMock = props => {
           IsJsonString(normalEditorValue) &&
           normalEditorValue !== '' &&
           values.isDynamicResponse &&
-          props.values.dynamicResponseKey !== '' &&
+          props.values.dynamicResponseKey !== '[]' &&
           props.values.randomSpecific === 'random' &&
           values.mockName !== '' &&
           values.endpoint !== '' &&
@@ -585,7 +583,7 @@ const CreateMock = props => {
           IsJsonString(textSpecificKey.jsontext) &&
           textSpecificKey.jsontext !== '' &&
           values.isDynamicResponse &&
-          props.values.dynamicResponseKey !== '' &&
+          props.values.dynamicResponseKey !== '[]' &&
           props.values.randomSpecific !== 'random' &&
           values.mockName !== '' &&
           values.endpoint !== '' &&
@@ -612,7 +610,7 @@ const CreateMock = props => {
         endPointRef.current.focus()
       } else if ((textSpecificKey.textType === "json") && jsonEditorError || !IsJsonString(normalEditorValue) || normalEditorValue === '') {
         responseBodyRef.current.focus()
-      } else if (values.isDynamicResponse && props.values.dynamicResponseKey === '') {
+      } else if (values.isDynamicResponse && props.values.dynamicResponseKey === '[]') {
         dynamicResponseKeyRef.current.focus()
       } else if ((textSpecificKey.textType === "json") &&
         (jsonEditorErrorSpecific || !IsJsonString(textSpecificKey.jsontext) || textSpecificKey.jsontext === '') &&
@@ -625,7 +623,7 @@ const CreateMock = props => {
         delayResponseRef.current.focus()
       }
      else if (values.isDynamicResponse &&
-        props.values.dynamicResponseKey !== '' &&
+        props.values.dynamicResponseKey !== '[]' &&
         props.values.randomSpecific !== 'random' &&
         values.mockName !== '' &&
         textSpecificKey.othertext !== '' && 
@@ -672,13 +670,6 @@ const CreateMock = props => {
 
     if (["default"].includes(props.values.serviceResponseType)) {
       const schematypes = values.ApiResponseSchemaTypes
-      // let ob = {} // eslint-disable-line no-use-before-define
-      // Object.keys(schematypes).forEach((e) => { // eslint-disable-line no-use-before-define
-      //   ob = { // eslint-disable-line no-use-before-define
-      //     ...ob, // eslint-disable-line no-use-before-define
-      //     [e]: Object.keys(schematypes[e]).length > 0 ? JSON.parse(schematypes[e]) : schematypes[e] // eslint-disable-line no-use-before-define
-      //   }// eslint-disable-line no-use-before-define
-      // })// eslint-disable-line no-use-before-define
       setFieldValue('ApiResponseSchemaTypes', schematypes)
     }
     if (typeof editorBodyText === "object") {
@@ -701,7 +692,7 @@ const CreateMock = props => {
     ) {
       dynamicResponseKeyValueRef.current.focus()
     }
-    if (props.values.dynamicResponseKey === '') {
+    if (props.values.dynamicResponseKey === '[]') {
       dynamicResponseKeyRef.current.focus()
     }
     if (((editorBodyText === '' || jsonEditorError || !IsJsonString(editorBodyText)) && textSpecificKey.textType === "json") || 
@@ -837,16 +828,20 @@ const CreateMock = props => {
             const normalValue = {
               "FETCH_NORMAL_RESPONSE": {value: jsonParsedData}
             }
+            if (pagetitle === "Edit Mock") {
+              setUploadJsonEditMode(true)
+            }
             setJson((prevState) => {
               return {
                 ...prevState,
                 ...normalValue
               }
             })
+           
           } catch (error) {
             return error
           }
-          setFieldValue('dynamicResponseKey', '')
+          setFieldValue('dynamicResponseKey', '[]')
           resolve(renderedResult)
         } else {
           console.log('json file is not valid')
@@ -978,9 +973,11 @@ const CreateMock = props => {
                 }
               }
             } else {
+              const dataVal = (isUploadJsonEditMode && fetchSchemaKey === "FETCH_NORMAL_RESPONSE") ? json[fetchSchemaKey].value : json[fetchSchemaKey]
+              const jsonVal = JSON.stringify(dataVal).replace(/\\"/g, '"')
               ob = {
                 ...ob, 
-                [fetchSchemaKey]: {value: JSON.stringify(json[fetchSchemaKey]).replace(/\\"/g, '"')}
+                [fetchSchemaKey]: {value: jsonVal}
               }
             }
           } else {
@@ -1047,10 +1044,10 @@ const CreateMock = props => {
         txt = JSON.parse(editorBodyText)
         bodyVar = JSON.parse(body.replace(/\|]/g, ''))
         if (!isEqual(txt, bodyVar)) {
-          setFieldValue('dynamicResponseKey', '')
+          setFieldValue('dynamicResponseKey', '[]')
         }
       } catch (e) {
-        setFieldValue('dynamicResponseKey', '')
+        setFieldValue('dynamicResponseKey', '[]')
       }
     }
   }, [editorBodyText])
@@ -1575,7 +1572,7 @@ const CreateMock = props => {
                               Data Output - In Size
                             </label>
                             <div
-                              className="custom-control custom-switch col-md-9"
+                              className="custom-control count-label custom-switch col-md-9"
                               id="bulkDataSizeToggle"
                             >
                               <Tooltip content="Toggle Status" direction="extreme">
@@ -1718,7 +1715,7 @@ const CreateMock = props => {
                                 </div>
                               )}
                               {(previewButtonClicked || saveButtonClicked) &&
-                                props.values.dynamicResponseKey === '' && (
+                                props.values.dynamicResponseKey === '[]' && (
                                   <div className="input-feedback text-danger" id="input-error">
                                     Response key is required
                                   </div>

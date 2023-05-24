@@ -42,28 +42,30 @@ app.use(compression())
 
 const {printf,combine,timestamp,label,colorize} = format
 // express winston acesss logs.before handling the routes.
-app.use(
-  expressWinston.logger({
-    transports: [
-      new transports.Console(),
-    ],
-    format: combine(colorize(), combine(
-      colorize({
-        all: true,
-      }),
-      label({
-        label: '\n[Access Log]',
-      }),
-      timestamp({
-        format: 'YY-MM-DD HH:MM:SS',
-      }),
-      printf(
-        // eslint-disable-next-line no-shadow
-        ({label, timestamp, level, message, ...rest}) => `${label} ${timestamp} ${level}: ${message} ${JSON.stringify(rest)}`
-      )
-    )),
-  })
-)
+if (!process.env.NODE_ENV === "production") {
+  app.use(
+    expressWinston.logger({
+      transports: [
+        new transports.Console(),
+      ],
+      format: combine(colorize(), combine(
+        colorize({
+          all: true,
+        }),
+        label({
+          label: '\n[Access Log]',
+        }),
+        timestamp({
+          format: 'YY-MM-DD HH:MM:SS',
+        }),
+        printf(
+          // eslint-disable-next-line no-shadow
+          ({label, timestamp, level, message, ...rest}) => `${label} ${timestamp} ${level}: ${message} ${JSON.stringify(rest)}`
+        )
+      )),
+    })
+  )
+}
 
 app.use(Express.json())
 app.use(Express.urlencoded({extended: true}))

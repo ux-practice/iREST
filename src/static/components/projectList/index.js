@@ -190,7 +190,7 @@ function ProjectListPage(props) {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-11 custom_offset_list">
-            <div className="card m-t-100 card-shadow-body">
+            <div className="card m-t-100 m-b-20 card-shadow-body">
               <div className="card-body">
                 <div className="d-flex justify-content-between">
                   <div className="form-group w-100">
