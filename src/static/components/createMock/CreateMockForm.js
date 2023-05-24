@@ -73,7 +73,7 @@ const Form = props => {
         newData?.isDynamicResponse &&
         newData?.dynamicResponseSpecific &&
         newData?.dynamicResponseSpecificKeyValue !== '' &&
-        newData?.dynamicResponseKey !== '' &&
+        newData?.dynamicResponseKey !== '[]' &&
         newData?.specificResponseType === 'json' &&
         IsJsonString(newData?.serviceResponseBody) &&
         !isJsonEditorError &&
@@ -83,14 +83,14 @@ const Form = props => {
       } else if ( newData?.isDynamicResponse &&
         newData?.dynamicResponseSpecific &&
         newData?.dynamicResponseSpecificKeyValue !== '' &&
-        newData?.dynamicResponseKey !== '' &&
+        newData?.dynamicResponseKey !== '[]' &&
         !isJsonEditorError &&
         newData?.specificResponseType === 'other') {
           props.dispatch(createMockAction(newData))
       } else if (
         newData?.isDynamicResponse &&
         newData?.dynamicResponseRandom &&
-        newData?.dynamicResponseKey !== '' &&
+        newData?.dynamicResponseKey !== '[]' &&
         IsJsonString(newData?.serviceResponseBody) &&
         !isJsonEditorError &&
         IsJsonString(newData?.dynamicResponseSpecificKeyValue)
@@ -137,7 +137,7 @@ const Form = props => {
           mockStatus: 'enabled',
           randomSpecific: 'random',
           isDynamicResponse: false,
-          dynamicResponseKey: '',
+          dynamicResponseKey: '[]',
           dynamicResponseRandom: true,
           dynamicResponseSpecific: false,
           dynamicResponseSpecificKeyValue: '',

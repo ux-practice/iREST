@@ -27,7 +27,7 @@ function apiResponse(req, res) {
     
     let {url} = req
     // remove IREST_RECORD_ID from url to search in mock
-    if (url.includes("IREST_RECORD_ID")) {
+    if (url.includes("IREST_RECORD_ID") || url.includes("iRest-auth-token")) {
       // eslint-disable-next-line prefer-destructuring
       url = url.split("?")[0]
     }

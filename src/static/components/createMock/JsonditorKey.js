@@ -25,7 +25,7 @@ export default class JsonEditorKey extends Component {
         if (typeof path.slice(-1)[0] === "string") {
           const {dynamicKeys, setDynamicKeys} = that.props
           if ( dynamicKeys.length === path.length && dynamicKeys.slice(-1)[0] === path.slice(-1)[0] ) {
-              setDynamicKeys([''])
+              setDynamicKeys([])
             } else {
               setDynamicKeys(path)
             }
