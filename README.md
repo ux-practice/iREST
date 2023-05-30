@@ -54,7 +54,7 @@ This command generates a brand new project with <my-app> name on your machine. T
   <br>
   
 **Run iREST on your machine**
-  - Go to your newly create app and run following command
+  - Go to your newly created app and run the following command:
 
 ```bash
 npm start
@@ -62,7 +62,7 @@ npm start
 This command will run the iREST instance on your machine and open a new browser tab in which iREST would be running.
   
   
-Enjoy start playing with **iREST** 🎉
+Enjoy and start playing with **iREST** 🎉
 <br>
 ### 🖐 Requirements
 
