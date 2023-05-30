@@ -128,10 +128,10 @@ Check out our roadmap below to get informed about the upcoming features. You may
 
 ## Documentation
 
-See our dedicated repository - https://github.com/ux-practice/iREST/tree/iREST_2.0_RELEASE_PUBLISH/docs for the iREST documentation, or view our documentation live:
+See our dedicated repository - https://github.com/ux-practice/iREST/blob/main/docs/ for the iREST documentation, or view our documentation live:
 
-- [Developer docs](https://github.com/ux-practice/iREST/blob/iREST_2.0_RELEASE_PUBLISH/docs/api.md)
-- [User guide](https://github.com/ux-practice/iREST/blob/iREST_2.0_RELEASE_PUBLISH/docs/user-guide.md)
+- [Developer docs](https://github.com/ux-practice/iREST/blob/main/docs/api.md)
+- [User guide](https://github.com/ux-practice/iREST/blob/main/docs/user-guide.md)
 
 ## License
 
