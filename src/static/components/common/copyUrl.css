@@ -1,0 +1,44 @@
+.copyImage {
+  margin-left: -20px;
+}
+
+.copy-url {
+  width: 226px;
+}
+
+.copy-endpoint {
+  text-decoration: none;
+  color: #8a8898;
+}
+
+.copy-endpoint:hover {
+  text-decoration: none;
+  color: #8a8898;
+}
+
+@media only screen and (max-width: 1260px) {
+  .copy-url {
+    width: 240px;
+  }
+  .copyImage {
+    margin-left: -20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .copy-url {
+    width: 190px;
+  }
+  .copyImage {
+    margin-left: -10px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .copy-url {
+    width: 90px;
+  }
+  .copyImage {
+    margin-left: -10px;
+  }
+}

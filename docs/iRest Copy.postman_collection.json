@@ -1,0 +1,1063 @@
+{
+	"info": {
+		"_postman_id": "b3b66e3a-b6b1-49db-97db-8b6738861f3e",
+		"name": "iRest Copy",
+		"description": "iRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Simulator",
+			"item": [
+				{
+					"name": "Default Service Response",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "Normal Response",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/irest-project/irest-get-default-responsed",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"irest-project",
+												"irest-get-default-responsed"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delayed Response",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/irest-project/irest-get-default-responsed-delay",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"irest-project",
+												"irest-get-default-responsed-delay"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Response Custom headers",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/Dynamic-Response/endpoint22211",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"Dynamic-Response",
+												"endpoint22211"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Disabled Mock Response",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/Dynamic-Response/eps",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"Dynamic-Response",
+												"eps"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Random value for dynamic key & with count value)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/Dynamic-Response/Endpoint-random-2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"Dynamic-Response",
+												"Endpoint-random-2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Specific value for dynamic key & with count value)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/Dynamic-Response/endpoint-specific-3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"Dynamic-Response",
+												"endpoint-specific-3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Random Value for dynamic key and with Dynamic count)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-random-count-1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"test-project-22334",
+												"endpoint-random-count-1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Dynamic Response (Specific Value for dynamic key and with Dynamic count)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-specific-count-1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"test-project-22334",
+												"endpoint-specific-count-1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "Dynamic data",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-test",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"rest",
+												"test-project-22334",
+												"endpoint-test"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Save Service Response",
+					"item": [
+						{
+							"name": "POST Save Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"question\": \"What is Javascript ?\",\r\n    \"answer\": \"Javascript is a HLL that works on chrome V8. It has certain external API such as timers, network request, etc.\",\r\n    \"vote\": 8,\r\n    \"author\": \"Anurag j\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/rest/irest-project/save-demo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"rest",
+										"irest-project",
+										"save-demo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Save Response",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"a\": 1\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-save-post?IREST_RECORD_ID=600ad00223752652241c27f2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"rest",
+										"test-project-22334",
+										"endpoint-save-post"
+									],
+									"query": [
+										{
+											"key": "IREST_RECORD_ID",
+											"value": "600ad00223752652241c27f2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATCH Save Response",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vote\": 11\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-save-post?IREST_RECORD_ID=600ad00223752652241c27f2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"rest",
+										"test-project-22334",
+										"endpoint-save-post"
+									],
+									"query": [
+										{
+											"key": "IREST_RECORD_ID",
+											"value": "600ad00223752652241c27f2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Save Response",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"IREST_RECORD_ID\": \"60054da5d0a5992d04b9279b\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/rest/test-project-22334/endpoint-save-post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"rest",
+										"test-project-22334",
+										"endpoint-save-post"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Existing Service Response",
+					"item": [
+						{
+							"name": "Existing List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/rest/irest-project/save-demo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"rest",
+										"irest-project",
+										"save-demo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Apis",
+					"item": [
+						{
+							"name": "Update Mock authenticationType",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"userId\":\"61b2c6dc04a12d2e04a302a9\",\"authenticationType\":\"Project Specific\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/authentication/mockId/63a54c65459897496c8cd3cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"authentication",
+										"mockId",
+										"63a54c65459897496c8cd3cd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Project authenticationType",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"userId\":\"61b2c6dc04a12d2e04a302a9\",\"authenticationType\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/authentication/project/projectId/63849c44ec993054dc04e7e8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"authentication",
+										"project",
+										"projectId",
+										"63849c44ec993054dc04e7e8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testId@impetus.com\",\r\n    \"password\": \"password\",\r\n    \"name\": \"test user\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.194.28:9000/api/register",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"194",
+								"28"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"anurag.jain@gmail.com\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:9000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mock",
+			"item": [
+				{
+					"name": "Create (Default)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5ee9bb30ae65d45d0831011f\",\r\n    \"projectId\": \"600ac977fd0c1f5960523c93\",\r\n    \"serviceResponseType\": \"default\",\r\n    \"serviceResponseBody\": {\"y\":120,\"z\":{},\"qa\":{\"as\":1,\"bf\":2},\"abc\":[],\"kbc\":[9,8,7,6,5],\"w\":[{\"k\":[],\"q\":123,\"p\":{},\"r\":[1,2,4]},{\"s\":1},1],\"x\":{\"a\": {},\"b\":1,\"c\":3}},\r\n    \"projectName\": \"irest-trial2\",\r\n    \"method\": \"GET\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"default-trial\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 5,\r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"default-trial\",\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [],\r\n    \"params\": [],\r\n    \"isDynamicResponse\": true,\r\n    \"dynamicResponseKey\": \"a\",\r\n    \"dynamicResponseRandom\": false,\r\n    \"dynamicResponseSpecific\": true,\r\n    \"dynamicResponseSpecificKeyValue\": [{\"answer\": \"answer\"}],\r\n    \"isDynamicImportCount\": true,\r\n    \"isDynamicImportSize\": false,\r\n    \"dynamicImportCount\": 1000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/mock/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Existing)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5ee9bb30ae65d45d0831011f\",\r\n    \"projectId\": \"5f02b4902d9e94232c4bc61f\",\r\n    \"serviceResponseType\": \"existing\",\r\n    \"referenceId\": \"5ff71980af213608284dee28\",\r\n    \"projectName\": \"test-project-22334\",\r\n    \"method\": \"GET\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"endpoint-save-post\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 5,\r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"save-demo\",\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [],\r\n    \"params\": [],\r\n    \"isDynamicResponse\": false,\r\n    \"dynamicResponseKey\": \"a\",\r\n    \"dynamicResponseRandom\": false,\r\n    \"dynamicResponseSpecific\": true,\r\n    \"dynamicResponseSpecificKeyValue\": [{\"answer\": \"answer\"}],\r\n    \"isDynamicImportCount\": true,\r\n    \"isDynamicImportSize\": false,\r\n    \"dynamicImportCount\": 1000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/mock/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create (Save)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5f9c18dd053cb11a5770c76e\",\r\n    \"projectId\": \"6005909e0e64366fd873d00d\",\r\n    \"serviceResponseType\": \"save\",\r\n    \"projectName\": \"irest-project\",\r\n    \"method\": \"GET\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"default-demo\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 5,\r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"save-demo\",\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [],\r\n    \"params\": [],\r\n    \"isDynamicResponse\": false\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/mock/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/mock/list?limit=10&offset=0&sortBy=undefined&order=undefined&search=undefined&projectId=6005909e0e64366fd873d00d&existing=true&userId=5f9c18dd053cb11a5770c76e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"list"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "sortBy",
+									"value": "undefined"
+								},
+								{
+									"key": "order",
+									"value": "undefined"
+								},
+								{
+									"key": "search",
+									"value": "undefined"
+								},
+								{
+									"key": "projectId",
+									"value": "6005909e0e64366fd873d00d"
+								},
+								{
+									"key": "existing",
+									"value": "true",
+									"description": "Existing will check the type service response type === 'save'"
+								},
+								{
+									"key": "userId",
+									"value": "5f9c18dd053cb11a5770c76e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/mock/item/5f2b835b7907d527f015b4f1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"item",
+								"5f2b835b7907d527f015b4f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status Enabled/Disbaled",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mockStatus\": \"enabled\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/mock/item/5fb796247e0b704cb0a9976b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"item",
+								"5fb796247e0b704cb0a9976b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5f9c18dd053cb11a5770c76e\",\r\n    \"projectId\": \"5f02b4902d9e94232c4bc61f\",\r\n    \"serviceResponseType\": \"default\",\r\n    \"serviceResponseBody\": {\"y\":120,\"z\":{},\"qa\":{\"as\":1,\"bf\":2},\"abc\":[],\"kbc\":[9,8,7,6,5],\"w\":[{\"k\":[],\"q\":123,\"p\":{},\"r\":[1,2,4]},{\"s\":1},1],\"x\":{\"a\": {},\"b\":1}},\r\n    \"projectName\": \"Dynamic-Response\",\r\n    \"method\": \"POST\",\r\n    \"path\": \"http://localhost:9000/api/rest/\",\r\n    \"endpoint\" : \"endpoint-test-strr\",\r\n    \"statusCode\": 200,\r\n    \"isDelay\": true,\r\n    \"delaySeconds\": 2, \r\n    \"contentType\": \"application/json\",\r\n    \"mockName\": \"test-mock\",\r\n    \"isDynamicResponse\": true,\r\n    \"mockStatus\": \"enabled\",\r\n    \"headers\": [{\"Custom-Header\": \"Custom-Value\"}],\r\n    \"params\": [],\r\n    \"dynamicResponseKey\": \"a\",\r\n    \"dynamicResponseRandom\": false,\r\n    \"dynamicResponseSpecific\": true,\r\n    \"dynamicResponseSpecificKeyValue\": [{\"answer\": \"answer\"}],\r\n    \"isDynamicImportCount\": true,\r\n    \"isDynamicImportSize\": false,\r\n    \"dynamicImportCount\": 1000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/mock/item/5fc9f51a3ab22a2d8c569e7e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"item",
+								"5fc9f51a3ab22a2d8c569e7e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"message\": \"Mock Deleted Successfully.\",\r\n  \"status\": 202\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/mock/item/5fc9f51a3ab22a2d8c569e7e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"mock",
+								"item",
+								"5fc9f51a3ab22a2d8c569e7e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jwt",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"anurag.jain@gmail.com\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:9000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFudXJhZy5qYWluQGdtYWlsLmNvbSIsImlhdCI6MTYwNzA2NzI0MSwiZXhwIjoxNjA3MDk2MDQxfQ.dPdQ7sLF1FevamkjV2JbXYBxIc2uVBvX9gQ-Jx0dNl8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/large-response",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"large-response"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/project/list?searchQuery=test&pageNo=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"project",
+								"list"
+							],
+							"query": [
+								{
+									"key": "searchQuery",
+									"value": "test"
+								},
+								{
+									"key": "userId",
+									"value": "5f9c18dd053cb11a5770c76e",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5ee9bb30ae65d45d0831011f\",\r\n    \"projectName\": \"irest-trial2\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/project/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"project",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "file",
+			"item": [
+				{
+					"name": "JSON Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/anurag.jain/Documents/incubator/iRest/docs/iRest.postman_collection.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/api//file/json-upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"",
+								"file",
+								"json-upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Project",
+					"item": [
+						{
+							"name": "Delete Project Token",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/token/projectId/63849c44ec993054dc04e7e8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"token",
+										"projectId",
+										"63849c44ec993054dc04e7e8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch Project Token Details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/token/projectId/63849c44ec993054dc04e7e8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"token",
+										"projectId",
+										"63849c44ec993054dc04e7e8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Project Token",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"userId\":\"61b2c6dc04a12d2e04a302a9\",\"token\":\"829hf9h9832y982ythg923h9g2\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/token/projectId/638dacc649f5bc36ccbe2435",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"token",
+										"projectId",
+										"638dacc649f5bc36ccbe2435"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Mock",
+					"item": [
+						{
+							"name": "Fetch Mock Token Details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/token/mockId/63849c44ec993054dc04e7e8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"token",
+										"mockId",
+										"63849c44ec993054dc04e7e8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Mock Token",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"userId\":\"61b2c6dc04a12d2e04a302a9\",\"token\":\"sdhf7834gbrigb34g9443g\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/token/mockId/63849c44ec993054dc04e7e8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"token",
+										"mockId",
+										"63849c44ec993054dc04e7e8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

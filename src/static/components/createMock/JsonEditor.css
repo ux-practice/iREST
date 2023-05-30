@@ -1,0 +1,35 @@
+.jsoneditor-react-container {
+  width: 100%;
+  height: 100%;
+}
+
+.example-class > .jsoneditor-icon {
+  background-position: -168px -48px; /* warning triangle */
+}
+
+.different_element {
+  background-color: #acee61;
+}
+
+.different_element div.jsoneditor-value {
+  color: red;
+}
+
+#container .different_element {
+  background-color: #77dfff;
+}
+
+#container .jsoneditor-contextmenu{
+  display: none;
+}
+
+div .jsoneditor-redo {
+display: none;
+}
+div .jsoneditor-undo {
+  display: none;
+  }
+
+div .jsoneditor-sort{
+  display: none;
+}

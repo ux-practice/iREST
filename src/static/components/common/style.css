@@ -1,0 +1,365 @@
+.modalStyle {
+  width: 600px;
+  height: 190px;
+  border: 1px solid #dddada;
+  border-radius: 4px;
+  position: fixed;
+  transform: translate(65%, 140%);
+  z-index: 1;
+  background: #fff;
+}
+
+.paraStyle {
+  font-size: 20px;
+  text-align: center;
+  transform: translateY(30px);
+}
+
+.flexStyle {
+  display: flex;
+  transform: translate(34%, 60px);
+}
+
+.btnStyle {
+  margin: 10px;
+  border: none;
+  padding: 10px;
+  width: 100px;
+}
+
+.continueBtn {
+  background-color: #17a2b8;
+  color: #ffffff;
+}
+
+.navbar-custom {
+  background-color: #004f9f;
+}
+
+.navbar-logo {
+  width: 30px;
+  height: 40px;
+}
+
+.navbar-dropdown {
+  border-color: #004f9f;
+  background-color: #004f9f;
+  color: #ffffff;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ffffff;
+}
+
+.dropbtn {
+  background-color: #004f9f;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.dropdown-content {
+  margin-left: 50px;
+  display: none;
+  position: absolute;
+  background-color: #004f9f;
+  font-size: 16px;
+  width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #004f9f;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #004f9f;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-dot {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #feeef1;
+  color: #fb5080;
+  border-radius: 50%;
+}
+
+.navbar-hamburger {
+  padding-right: 20px;
+}
+
+/* Custom properties */
+:root {
+  --tooltip-text-color: #ffffff;
+  --tooltip-background-color: black;
+  --tooltip-margin: 5px;
+  --tooltip-arrow-size: 6px;
+  --tooltip-margin-left: 50px;
+  --tooltip-margin-top: 35px;
+}
+
+/* Wrapping */
+.Tooltip-Wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+/* Absolute positioning */
+.Tooltip-Tip {
+  position: absolute;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px;
+  color: var(--tooltip-text-color);
+  background: var(--tooltip-background-color);
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+/* CSS border triangles */
+.Tooltip-Tip::before {
+  content: ' ';
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-width: var(--tooltip-arrow-size);
+  margin-left: calc(var(--tooltip-arrow-size) * -1);
+}
+
+/* Absolute positioning */
+.Tooltip-Tip.top {
+  top: calc(var(--tooltip-margin) * -1);
+}
+/* CSS border triangles */
+.Tooltip-Tip.top::before {
+  top: 100%;
+  border-top-color: var(--tooltip-background-color);
+}
+
+/* Absolute positioning */
+.Tooltip-Tip.right {
+  left: calc(100% + var(--tooltip-margin));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+/* CSS border triangles */
+.Tooltip-Tip.right::before {
+  left: calc(var(--tooltip-arrow-size) * -1);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  border-right-color: var(--tooltip-background-color);
+}
+
+/* Absolute positioning */
+.Tooltip-Tip.bottom {
+  left: -20px;
+  bottom: calc(var(--tooltip-margin-top) * -1);
+}
+/* CSS border triangles */
+.Tooltip-Tip.bottom::before {
+  bottom: 100%;
+  border-bottom-color: var(--tooltip-background-color);
+}
+
+/* Absolute positioning */
+.Tooltip-Tip.left {
+  left: auto;
+  right: calc(100% + var(--tooltip-margin));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+/* CSS border triangles */
+.Tooltip-Tip.left::before {
+  left: auto;
+  right: calc(var(--tooltip-arrow-size) * -2);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  border-left-color: var(--tooltip-background-color);
+}
+
+.Tooltip-Tip.extreme {
+  left: auto;
+  right: calc(100% + var(--tooltip-margin-left));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+/* CSS border triangles */
+.Tooltip-Tip.extreme::before {
+  left: auto;
+  right: calc(var(--tooltip-arrow-size) * -2);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  border-left-color: var(--tooltip-background-color);
+}
+
+.custom-toggle {
+  border-style: none;
+  background-color: #f7f7f7;
+  color: #000000;
+  padding-bottom: 15px;
+}
+
+.image-toggle {
+  margin-right: 5px;
+}
+
+.content-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+.menu-bars {
+  background: none;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-menu {
+  background-color: #004f9f;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  margin-top: 50px;
+  left: -100%;
+  transition: 850ms;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.nav-menu.active {
+  display: flex;
+  justify-content: center;
+  left: -25px;
+  transition: 350ms;
+  margin-top: 50px;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav-text {
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+  margin-left: -40px;
+  margin-top: -10px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #004f9f;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav-title {
+  margin-left: 50px;
+}
+
+.nav-inactive-link {
+  background-color: #004f9f;
+  color: #ffffff;
+}
+
+.nav-inactive-link:hover {
+  background-color: #004f9f;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-active-link {
+  background-color: #ffffff;
+  color: #004f9f;
+}
+
+.nav-active-link:hover {
+  background-color: #ffffff;
+  color: #004f9f;
+  text-decoration: none;
+}

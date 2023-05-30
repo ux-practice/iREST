@@ -1,0 +1,7 @@
+<svg id="Buttons_Chat" data-name="Buttons / Chat" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="bg">
+    <rect id="bg-2" data-name="bg" width="36" height="36" rx="10" fill="#fff"/>
+    <rect id="bg-3" data-name="bg" width="36" height="36" rx="10" fill="rgba(50,114,178,0.1)"/>
+  </g>
+  <path id="Icon" d="M5.238-15.012V-13.5H-5.238v-1.512h2.6l.773-.738H1.863l.773.738ZM-4.5-3.762v-9h9v9a1.449,1.449,0,0,1-.457,1.055,1.449,1.449,0,0,1-1.055.457H-2.988a1.449,1.449,0,0,1-1.055-.457A1.449,1.449,0,0,1-4.5-3.762Z" transform="translate(18 26.815)" fill="#004f9f"/>
+</svg>

@@ -1,0 +1,4 @@
+<svg id="Buttons_Call" data-name="Buttons / Call" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <rect id="bg" width="36" height="36" rx="10" fill="#ebf1f8"/>
+  <text id="Icon" transform="translate(18 24)" fill="#004f9f" font-size="14" font-family="Lato-Semibold, Lato" font-weight="600"><tspan x="-12.855" y="0">TRY</tspan></text>
+</svg>

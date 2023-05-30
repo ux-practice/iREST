@@ -1,0 +1,51 @@
+on:
+  push:
+    branches:
+      - iREST_2.0_RELEASE_PUBLISH
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14.x"
+      - run: npm install
+     
+      - name: Get latest release tag
+        uses: rez0n/actions-github-release@main
+        id: fetch-latest-release
+        env:
+          token: ${{ secrets.IREST_LIVE_GITHUB_TOKEN }}
+          repository: "ux-practice/iREST"
+          type: "latest"
+ 
+      - name: Get versions
+        run: |
+          version=$(node -p "require('./package.json').version")
+          echo "CURRENT_VERSION=$version" >> $GITHUB_ENV
+          echo "CURRENT_VERSION_APPENDED=v$version" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=${{steps.fetch-latest-release.outputs.release}}" >> $GITHUB_ENV
+                   
+      - name: Create Release Tag
+        if: ${{ env.CURRENT_VERSION_APPENDED != env.RELEASE_VERSION }}
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.0
+        with:
+          github_token: ${{ secrets.IREST_LIVE_GITHUB_TOKEN }}
+          custom_tag: ${{ env.CURRENT_VERSION }}
+         
+      - name: Create a GitHub release
+        if: ${{ env.CURRENT_VERSION_APPENDED != env.RELEASE_VERSION }}
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+
+      - name: NPM Publish
+        if: ${{ env.CURRENT_VERSION_APPENDED != env.RELEASE_VERSION }}
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.IREST_LIVE_NPM_TOKEN }}
+

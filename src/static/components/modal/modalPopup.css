@@ -1,0 +1,79 @@
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: visible;
+  height: 100%;
+}
+
+.trashImage {
+  width: 18px;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.modalDeleteContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.paraContainer {
+  height: 100%;
+  color: #8a8898;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.modalButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 100%;
+}
+
+.cancelBtn {
+  width: 120px;
+  height: 44px;
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #e7e8e9;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.deleteBtn {
+  width: 120px;
+  height: 44px;
+  background-color: #147ad6;
+  border: 1px solid #147ad6;
+  border-radius: 4px;
+  color: white;
+  opacity: 1;
+}
+
+.deleteDisableBtn {
+  opacity: 0.5;
+}
+
+.input-val {
+  width: 100%;
+  border: 1px solid #ced4da
+}
+
+.token-note {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.delete-token-btn {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.flex-style {
+  display: flex
+}
