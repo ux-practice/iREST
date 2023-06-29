@@ -1,0 +1,28 @@
+.project-column {
+  width: 240px;
+}
+
+.created-count-column {
+  width: 240px;
+}
+
+.created-date-column {
+  width: 250px;
+}
+
+.created-update-column {
+  width: 250px;
+}
+
+.date-label {
+  color: #8a8898;
+  width: 150px;
+}
+
+.card-shadow-body {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mockname-project-label {
+  font-weight: bold;
+}

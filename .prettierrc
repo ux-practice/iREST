@@ -1,0 +1,10 @@
+{
+  "endOfLine": "auto",
+  "eslintIntegration": true,
+  "printWidth": 100,
+  "semi": false,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "jsxBracketSameLine": false,
+  "bracketSpacing": false
+}

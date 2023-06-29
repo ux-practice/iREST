@@ -1,0 +1,145 @@
+# This file is a template, and might need editing before it works on your project.
+# You can copy and paste this template into a new `.gitlab-ci.yml` file.
+# You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
+#
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Nodejs.gitlab-ci.yml
+
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:latest
+
+# Pick zero or more services to be used on all builds.
+# Only needed when using a docker container to run your tests in.
+# Check out: https://docs.gitlab.com/ee/ci/services/index.html
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+  - git-sync
+  
+# This folder is cached between builds
+# https://docs.gitlab.com/ee/ci/yaml/index.html#cache
+cache:
+  paths:
+    - node_modules/
+
+# Lint job
+lint:
+  # Docker image
+  stage: lint
+  # Config to use GitLab Shared Runner with Executor Docker
+  tags:
+    - my-shell-runner
+  script:
+    - npm install
+    - npm run lint
+  # Defines the names of branches and tags the job runs for
+  only:
+    - iREST_2.0_RELEASE_PUBLISH1
+
+# Test job
+test:
+  # Docker image
+  image: node:latest
+  # Attach Test job to Test stage
+  stage: test
+  # Config to use GitLab Shared Runner with Executor Docker
+  tags:
+    - my-shell-runner
+  before_script:
+    - npm install
+  script:
+    - npm run test:ci
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  artifacts:
+    paths:
+      - test-results/
+    when: always
+    reports:
+      junit:
+        - junit.xml  
+  # Defines the names of branches and tags the job runs for
+  only:
+    - iREST_2.0_RELEASE_PUBLISH1
+
+# Build job
+build:
+  # Docker image
+  #image: node:latest
+  stage: build
+  # Config to use GitLab Shared Runner with Executor Docker
+  tags:
+    - my-shell-runner
+  script:
+    - echo "Installing Dependency. Please wait.."
+    - npm install
+    - npm run build
+    - echo "Cleaning build directory..."
+    - rm -rf build
+    #create build if not exists
+    - echo "Creating build folder..."
+    - mkdir -p build
+    - echo "copying artifact to build folder..."
+    - cp -r lib dist node_modules package.json .env.remote.prod build/
+    - chmod -R 755 build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 2 hours  
+  # Defines the names of branches and tags the job runs for
+  only:
+    - iREST_2.0_RELEASE_PUBLISH
+
+# Deploy JJob
+deploy:
+  # Attach Deploy job to Deploy stage
+  stage: deploy
+  # Config to use our Runner with Executor Shell
+  tags:
+    - my-shell-runner
+  script:
+    - sh local-server-deployment.sh
+  only:
+    - iREST_2.0_RELEASE_PUBLISH1
+
+git-sync:
+  stage: git-sync
+  tags:
+    - power-shell-runner
+  script:
+    - $srcDir = "$pwd\*"
+    - $destDir = "$IREST_PROJECT_LIVE_DIR"
+    - Copy-Item $srcDir $destDir -Exclude @("node_modules",".git") -Recurse -Force
+    - Set-Location -Path $IREST_PROJECT_LIVE_DIR
+    - $GIT_PATH = Join-Path -Path $IREST_PROJECT_LIVE_DIR -ChildPath .git
+    - $IS_GIT_INITIALISED = Test-Path -Path $GIT_PATH
+
+    - if (!$IS_GIT_INITIALISED) { git init }
+    - git config --global --add safe.directory $IREST_PROJECT_LIVE_DIR
+    - $IS_REF_PRESENT = git show-ref --heads $CI_COMMIT_REF_NAME; $?
+    - if (!$IS_REF_PRESENT) { git checkout -b $CI_COMMIT_REF_NAME } else { git checkout $CI_COMMIT_REF_NAME }
+    - git status
+    - git config user.email $GITLAB_USER_EMAIL
+    - git config user.name $GITLAB_USER_NAME
+    - Set-Location -Path "$IREST_PROJECT_LIVE_DIR\.git"
+    - Set-Location -Path $IREST_PROJECT_LIVE_DIR
+    - git add .
+    - $IS_VALID_COMMIT = git commit -m $CI_COMMIT_MESSAGE; $?
+
+    - if ($IS_VALID_COMMIT) {
+        $GIT_REMOTE = git config remote.origin.url; $?;
+        $GITHUB_URL = "https://ux-practice:$IREST_LIVE_GITHUB_TOKEN@github.com/ux-practice/iREST.git";
+        if ($GIT_REMOTE -AND !$GIT_REMOTE.Contains($IREST_LIVE_GITHUB_TOKEN)) { git remote remove origin };
+        $GIT_REMOTE = git config remote.origin.url; $?;
+        if (!$GIT_REMOTE) { git remote add origin $GITHUB_URL} ;
+        $GIT_REMOTE_REF = git ls-remote --exit-code --heads $GITHUB_URL $CI_COMMIT_REF_NAME ; $?;
+        if ($GIT_REMOTE_REF) { git pull origin $CI_COMMIT_REF_NAME --allow-unrelated-histories };
+        git push --set-upstream origin $CI_COMMIT_REF_NAME;
+      }
+
+  only:
+    - iREST_2.0_RELEASE_PUBLISH

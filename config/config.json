@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "iRest",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage":"./database/iRest.db"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "iRest",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage":"./database/iRest.db"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "iRest",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage":"./database/iRest.db"
+  }
+}

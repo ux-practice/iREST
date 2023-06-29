@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logger custom format no extra params 1`] = `"Default Logger 2021-02-03T10:50:25.713+05:30 debug: hello world! "`;
+
+exports[`logger custom format no extra params 2`] = `"Default Logger 2021-02-03T10:50:25.713+05:30 debug: hello world! {\\"headers\\":{\\"content-type\\":\\"application/json\\"}}"`;
